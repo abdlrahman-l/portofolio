@@ -4,6 +4,7 @@ import './style.css';
 import AnimationRevealPage from './helpers/AnimationRevealPage';
 import Hero from "./components/hero/TwoColumnWithPrimaryBackground"
 import ThreeColContactDetails from './components/cards/ThreeColContactDetails';
+import Timeline from 'components/timeline/Timeline';
 
 const description = 'I was developing / creating website application using React, php (CodeIgniter) and mobile application using React Native and Android Native. I like to solve problem through code, data structure and algorithm'
 function App() {
@@ -15,6 +16,9 @@ function App() {
       </AnimationRevealPage>
       <AnimationRevealPage>
         <ThreeColContactDetails />
+      </AnimationRevealPage>
+      <AnimationRevealPage>
+        <Timeline />
       </AnimationRevealPage>
     </>
   );
