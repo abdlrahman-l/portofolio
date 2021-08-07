@@ -6,8 +6,8 @@ import tw from "twin.macro";
 import { motion } from "framer-motion";
 import useInView from "@owaiswiz/use-in-view";
 
-const StyledDiv = tw.div`font-display min-h-screen text-secondary-500 p-8 overflow-hidden`;
-function AnimationReveal({ disabled, children }) {
+const StyledDiv = tw.div`font-display text-secondary-500 p-8 overflow-hidden`;
+export function AnimationReveal({ disabled, children }) {
   if (disabled) {
     return <>{children}</>;
   }
@@ -51,7 +51,7 @@ function AnimatedSlideInComponent({ direction = "left", offset = 30, children })
 }
 
 export default props => (
-  <StyledDiv className="App">
+  <StyledDiv>
     <AnimationReveal {...props} />
   </StyledDiv>
 );
