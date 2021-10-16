@@ -6,15 +6,17 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { PrimaryBackgroundContainer } from 'components/hero/TwoColumnWithPrimaryBackground';
 import { AnimationReveal } from '../../helpers/AnimationRevealPage';
+import CustomModal from 'components/modal/CustomModal';
+import TwoColumnWithInput from 'components/hero/TwoColumnWithInput';
 
 const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
 const EventBanner = tw.div`bg-black text-white py-8`
 const EventBannerFlex = tw.div`bg-black text-white py-8`
-const LeftBanner = tw.div`flex flex-col w-full sticky lg:w-1/3 mt-2 md:mt-12 px-8`
+const LeftBanner = tw.div`flex flex-col sticky lg:w-1/3 mt-2 md:mt-12 px-8`
 const EventContainer = tw.div`ml-0 md:ml-12 lg:w-2/3 overflow-y-scroll`
 const EventSecondContainer = tw.div`container mx-auto w-full h-full`
 const TimelineContainer = tw.div`relative flex-wrap`
-const BannerTitle = tw.p`ml-2 text-yellow-300 uppercase`
+const BannerTitle = tw.h4`ml-2 text-4xl text-yellow-300 uppercase`
 const BannerSubTitle = tw.p`text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2`
 const BannerDescription = tw.p`text-sm md:text-base text-gray-500 mb-4`
 const BorderYellow = tw.div`border-4 border-yellow-500 absolute h-full border`
@@ -28,6 +30,7 @@ const EventTitle = tw.h4`mb-3 mt-3 font-bold text-lg md:text-2xl `
 const EventDescription = tw.p`text-sm md:text-base leading-snug text-opacity-100`
 const BottomImage = tw.img`m-auto flex max-w-96 h-auto w-full`
 const FullTimelineContainer = tw(PrimaryBackgroundContainer)`flex lg:flex-row flex-col`
+const ModalLink = tw.a`underline`
 
 const eventData = {
     date: '1-6 May, 2021',
@@ -43,7 +46,10 @@ const eventsData = [
     eventData,
     {
         ...eventData,
-        children: <a> test </a>
+        children: 
+        <CustomModal clickTarget={<ModalLink>See More</ModalLink>}>
+            <TwoColumnWithInput />
+        </CustomModal>
     }
 ]
 
@@ -57,9 +63,6 @@ function Timeline() {
                     Here’s your guide to the tech fest 2021 process. Go through all the steps to know the exact process of the
                     fest.
                 </BannerDescription>
-                {/* <a href="#"
-                class="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
-                Explore Now</a> */}
             </LeftBanner>
             <EventContainer>
                 <EventSecondContainer>

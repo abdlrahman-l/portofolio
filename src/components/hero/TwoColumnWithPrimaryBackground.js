@@ -15,7 +15,7 @@ import logoImageSrc from "images/logo-light.svg";
 import arLogo from 'images/arLogo.png'
 import serverIllustrationImageSrc from "images/server-illustration-2.svg";
 
-export const PrimaryBackgroundContainer = tw.div`-mx-8 px-8 bg-indigo-900 text-gray-100`;
+export const PrimaryBackgroundContainer = tw.div`-mx-8 px-8 bg-indigo-800 text-gray-100`;
 const Header = tw(HeaderBase)`max-w-none -mt-8 py-8 -mx-8 px-8`;
 const NavLink = tw(NavLinkBase)`lg:text-gray-100 lg:hocus:text-gray-300 lg:hocus:border-gray-100`;
 const LogoLink = tw(LogoLinkBase)`text-gray-100 hocus:text-gray-300`;

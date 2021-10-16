@@ -9,6 +9,7 @@ export default ({ className, ...props }) => {
     <Modal
       className={contentClassName}
       overlayClassName={overlayClassName}
+      ariaHideApp={false}
       {...props}
     />
   )
