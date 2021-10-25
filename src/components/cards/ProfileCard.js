@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro";
 import PropTypes from 'prop-types'
-import { ReactComponent as TwitterIcon} from "images/twitter-icon.svg";
+import { ReactComponent as HackerrankIcon} from "images/hackerrank.svg";
 import { ReactComponent as LinkedinIcon} from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
 
@@ -19,7 +19,7 @@ const CardContent = styled.div`
   }
   .name {
     ${tw`mt-1 text-xl font-medium text-gray-900`}
-  9
+  }
 `
 
 const CardLinks = styled.div`
@@ -39,22 +39,22 @@ function ProfileCard({
     subTitle,
     links = [
         {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
+          url: "https://www.hackerrank.com/abdlrhmn_l?hr_r=1",
+          icon: HackerrankIcon,
         },
         {
-          url: "https://linkedin.com",
+          url: "https://www.linkedin.com/in/abdulrahman-l/",
           icon: LinkedinIcon,
         },
         {
-          url: "https://github.com",
+          url: "https://github.com/abdlrahman-l",
           icon: GithubIcon,
         },
       ]
 }) {
     return (
         <Card>
-            <CardImage imageSrc={`https://media-exp1.licdn.com/dms/image/C4D03AQF8mzqw1yrs3A/profile-displayphoto-shrink_400_400/0/1623941507647?e=1639612800&v=beta&t=4mRjXq5OJYLEtH-YmXH2lhu6fS6MeFHYTA80Wt0qSuw`} />
+            <CardImage imageSrc={`https://media-exp1.licdn.com/dms/image/C5603AQElOyRk_5tcEw/profile-displayphoto-shrink_400_400/0/1634485746311?e=1640822400&v=beta&t=Rm9lbF4d2oFqdcEmSDsB0CgWwasT1qbHkF46jVebSvc`} />
             <CardContent>
             <span className="position">{'Software Engineer'}</span>
             <span className="name">{'Abdul Rahman'}</span>
